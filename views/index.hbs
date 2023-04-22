@@ -1,0 +1,26 @@
+<div class="d-flex flex-column p-2 bd-highlight align-items-center">
+
+  <div class="ms-5 mt-5 mb-3 " id="title" style="width: 20em;">
+    <h1>
+      Account Login
+    </h1>
+  </div>
+  <form class="col g-3" action="/login" method="POST" >
+    <div class="mb-3" style="width: 20em;">
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="email">
+    </div>
+
+    <div class="mb-3" style="width: 20em;">
+      <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" name="password">
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+  {{#if errorSign }}
+  <div class="alert alert-info mt-5" role="alert">
+    <span class="mr-2">Alert :</span> <code>{{ errorSign }}</code>
+  </div>
+  {{/if}}
+</div>
